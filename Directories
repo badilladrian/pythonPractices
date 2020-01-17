@@ -1,0 +1,38 @@
+pip install pandas
+import pandas as pd 
+path = 'C:\\Users\\Usuario\\Documents\\Adrian\\DBA\\test.txt'
+sample_data = pd.read_csv(path)
+************************---------------------------------------------
+TO CHANGE THE WORKING DIRECTOY
+import os
+print(os.getcwd())
+os.chdir(r"C:\\Users\\Usuario\\Documents\\Adrian\\Python\\Python Practices") 
+print(os.getcwd())
+************************---------------------------------------------
+LINUX
+cat to read a file json
+vi _nameOffile_
+:x to save
+************************---------------------------------------------
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello World"
+    
+@app.route("/user/<username>")
+def show_user(username):
+    return "User: %s" % username
+
+FLASK_APP-service.py flask run
+curl localhost:5000
+curl localhost:5000/user/jolson
+************************---------------------------------------------
+vi service.py
+django-admin strarpoject mysite
+tree .
+python manage.py runserver
+************************---------------------------------------------
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'MyNewPass';
+Change the root password if not set up

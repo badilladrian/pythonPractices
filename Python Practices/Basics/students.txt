@@ -1,0 +1,5 @@
+C:/Users/Usuario/AppData/Local/Programs/Python/Python38/python.exe "c:/Users/Usuario/Documents/Adrian/Python/Python Practices/GettingStarted/04/functions.py"
+002
+pedro
+juan
+marco
