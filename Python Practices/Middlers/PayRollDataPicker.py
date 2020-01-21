@@ -1,7 +1,7 @@
 import csv
 import os
 
-os.chdir(r"C:\\Users\\Usuario\\Documents\\Adrian\\Python\\Python Practices\\CVS") 
+os.chdir(r"C:\\Users\\Usuario\\Documents\\Development\\Python\\Python Practices\\CVS") 
 print(os.getcwd())
 LIST_INTERVIEWER_ID= [] 
 LIST_INTERVIEWER_NAME= []
@@ -14,7 +14,7 @@ LIST_EXTENSIONS= []
 LIST_BREAK_TIME= []
 LIST_LUNCH_TIME= []
 LIST_MEETING_TIME= []
-LIST_BREAK_TIMEDISCOUNT= []k
+LIST_BREAK_TIMEDISCOUNT= []
 LIST_LUNCH_TIMEPAID= []
 LIST_PAID_HOURS = []
 
