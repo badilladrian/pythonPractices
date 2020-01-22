@@ -4,6 +4,9 @@ from urllib.request import urlopen
 from urllib.error import HTTPError
 from urllib.error import URLError
 
+#usando el package de BeutifulSoup
+from bs4 import BeautifulSoup        
+
 #import urllib.request
 #with urllib.request.urlopen('http://python.org/') as response:
 #   html = response.read()
@@ -33,6 +36,10 @@ else:
 #This is to create a line break between function results
 space = "                     /LINE***BREAK\       "
 print(space)
+
+URL = "http://www.example.com/"
+sitio = urlopen(URL)
+
     
 print("SECOND CORRECT URL")
 #Try to open the URL
@@ -67,3 +74,19 @@ def lineBreak():
 lineBreak()
 print(test)
 
+def lineBreak(ReciboMensaje):
+    print("====--"+ReciboMensaje+"--============---"
+    +ReciboMensaje+"---=========--"
+    +ReciboMensaje+"--===============")
+
+lineBreak("8")
+
+  #indicamos por parametro que vamos a darle formato
+resultados = BeautifulSoup(sitio.read(), 'html.parser')
+print("Usando BeutifulSoup puedo filtrar la etiqueta HTML que desee. Cuantos <h1> hay?")
+h1 = resultados.findAll('h1')
+print(h1)
+
+"""HTML — contain the main content of the page.
+CSS — add styling to make the page look nicer.
+JS — Javascript files add interactivity to web pages."""
