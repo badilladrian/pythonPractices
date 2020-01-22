@@ -1,0 +1,47 @@
+<!-- Asi se comenta en bloque un HTML
+de manera tal que este codigo de etiqueta puede contener
+tanto estilos como logica utilizando CSS y Javascript-->
+
+<html> 
+    <head>
+        <title>Example of Form Input</title>
+        <script src="FileSaver.js"></script>
+        <script type="text/javascript">     
+            function capture()
+               { // se captura en una variable (objeto) cada valor ingresado
+                 var str1=document.getElementById("input1").value;
+                 var str2=document.getElementById("input2").value;
+                 var time_mark = Date(); // se hace un time stap
+
+                 var myObj = {name: str1, pass: str2, Time: time_mark};
+                 var myJSON = JSON.stringify(myObj);
+                 window.alert(myJSON)
+                 console.log(myJSON)
+                 var blob = new Blob([myJSON], {type:"text/plain;charset=utf-8"});
+                 saveAs(blob, "data.json");
+              }
+
+               function show() { // para mostrar la clave
+                var pass = document.getElementById("input2");
+                // guardo el input del user 
+                if (pass.type === "password") {
+                 pass.type = "text";
+                } else {
+                 pass.type = "password";
+                }
+              }
+              /*un bloque de comentario se genera de este modo
+              en javascript!*/
+            </script>
+    </head>
+
+    <body>
+        <input id="input1" placeholder="Enter Username">
+        <br><br>
+        <input id="input2" type="password" placeholder="Enter password">
+        <br><br>
+        <button onclick="show()" id="bt1">Show Text</button>
+        <br><br>
+        <button onclick="capture()" id="bt2">Submit Info!</button>
+    </body>
+</html>
