@@ -88,7 +88,6 @@ tag =  input('Cual etiqueta desea revisar de: ' + URL)
 print("Usando BeutifulSoup puedo filtrar la etiqueta "
 + "HTML que desee. Cuantos " + tag +" hay?")
 print(resultados.findAll(tag))
-
 """HTML — contain the main content of the page.
 CSS — add styling to make the page look nicer.
 JS — Javascript files add interactivity to web pages."""
