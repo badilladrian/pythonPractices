@@ -83,9 +83,11 @@ lineBreak("8")
 
   #indicamos por parametro que vamos a darle formato
 resultados = BeautifulSoup(sitio.read(), 'html.parser')
-print("Usando BeutifulSoup puedo filtrar la etiqueta HTML que desee. Cuantos <h1> hay?")
-h1 = resultados.findAll('h1')
-print(h1)
+tag =  input('Cual etiqueta desea revisar de: ' + URL)
+
+print("Usando BeutifulSoup puedo filtrar la etiqueta "
++ "HTML que desee. Cuantos " + tag +" hay?")
+print(resultados.findAll(tag))
 
 """HTML — contain the main content of the page.
 CSS — add styling to make the page look nicer.
